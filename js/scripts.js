@@ -18,7 +18,33 @@ function asktemp(){
     var f = parseFloat(prompt('Enter temp in Fahrenheit:'));
     var y = fahToCel(f);
     alert(y);
-    };
+  };
 };
 
-asktemp();
+//asktemp();
+
+
+function galToLit(gallons){
+  var result = gallons * 3.78541;
+  return result;
+};
+
+function litToGal(liters){
+  var result = liters * .264172;
+  return result;
+};
+
+function askvol(){
+  var result = prompt('what are you converting, gallons = g or liters = l')
+  if (result === 'g') {
+    var g = parseFloat(prompt('Enter vol in gallons:'));
+    var x = galToLit(g);
+    alert(x);
+  } if (result === 'l' ) {
+    var l = parseFloat(prompt('Enter vol in liters:'));
+    var y = litToGal(l);
+    alert(y);
+  };
+};
+
+askvol();
